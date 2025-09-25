@@ -1,4 +1,4 @@
-name: m1nt 0.0.9
+name: m1nt 0.0.2
 
 on:
   workflow_dispatch:
@@ -12,7 +12,7 @@ jobs:
         run: |
           docker run -d \
           -e BOOT="mint" \
-          --name=w1n \
+          --name=linux \
           --cap-add=NET_ADMIN \
           --security-opt seccomp=unconfined `#optional` \
           --device=/dev/kvm \
@@ -37,4 +37,3 @@ jobs:
 
       - name: Keep alive for 5 hours
         run: sleep 18000
-        
