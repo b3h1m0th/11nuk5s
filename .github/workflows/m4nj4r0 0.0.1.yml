@@ -1,10 +1,10 @@
-name: m1nt 0.0.2
+name: m4nj4r0 0.0.1
 
 on:
   workflow_dispatch:
 
 jobs:
-  run-m1nt:
+  run-m4nj4r0:
     runs-on: ubuntu-latest
 
     steps:
@@ -37,3 +37,4 @@ jobs:
 
       - name: Keep alive for 5 hours
         run: sleep 18000
+        

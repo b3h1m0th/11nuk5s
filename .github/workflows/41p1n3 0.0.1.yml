@@ -1,17 +1,17 @@
-name: m1nt 0.0.2
+name: 41p1n3 0.0.1
 
 on:
   workflow_dispatch:
 
 jobs:
-  run-m1nt:
+  run-41p1n3:
     runs-on: ubuntu-latest
 
     steps:
       - name: Run container
         run: |
           docker run -d \
-          -e BOOT="mint" \
+          -e BOOT="alpine" \
           --name=11nuk5 \
           --cap-add=NET_ADMIN \
           --security-opt seccomp=unconfined `#optional` \
@@ -37,3 +37,4 @@ jobs:
 
       - name: Keep alive for 5 hours
         run: sleep 18000
+        
