@@ -1,4 +1,4 @@
-name: 11nuk5 0.0.10
+name: 11nuk5 0.0.11
 
 on:
   workflow_dispatch:
@@ -18,7 +18,6 @@ jobs:
           --device=/dev/kvm \
           --device=/dev/net/tun \
           -e TZ=Etc/UTC \
-          -e VERSION:"https://archive.org/download/nano11_25h2/nano11%2025h2.iso" \
           -e QEMUDISPLAY=web \
           -p 8006:8006 \
           -v /config:/storage \
