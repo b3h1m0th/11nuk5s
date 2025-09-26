@@ -1,25 +1,14 @@
-name: q3d3r 0.0.9
+name: 11nuk5 0.0.10
 
 on:
   workflow_dispatch:
 
 jobs:
-  run-q3d3r:
+  run-11nuk5:
     runs-on: ubuntu-latest
 
     steps:
-    
-      - name: prep
-        run: |
-          sudo mkdir -p /mnt/kasm_user_share/oem
-          sudo mkdir -p /mnt/kasm_user_share/w11
-          sudo mkdir -p /mnt/kasm_user_share
-          sudo chown -R 1000:1000 /mnt/kasm_user_share/
-          git clone https://github.com/b3h1m0th/kasm-qemu-dockur.git
-          cd kasm-qemu-dockur
-          sudo cp -r ./oem /mnt/kasm_user_share/
-          ls
-
+        
       - name: Run container
         run: |
           docker run -d \
@@ -35,7 +24,7 @@ jobs:
           -v /config:/storage \
           --shm-size="1gb" \
           --restart unless-stopped \
-          r014nd5m1th/q3d3r
+          r014nd5m1th/11nuk5
           
       - name: Show running containers
         run: docker ps
