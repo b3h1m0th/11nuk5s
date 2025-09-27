@@ -14,6 +14,7 @@ jobs:
           -e BOOT="kali" \
           --name=11nuk5 \
           --cap-add=NET_ADMIN \
+          --privileged \
           --security-opt seccomp=unconfined `#optional` \
           --device=/dev/kvm \
           --device=/dev/net/tun \
