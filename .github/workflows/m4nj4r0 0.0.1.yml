@@ -11,7 +11,7 @@ jobs:
       - name: Run container
         run: |
           docker run -d \
-          -e BOOT="mint" \
+          -e BOOT="manjaro" \
           --name=11nuk5 \
           --cap-add=NET_ADMIN \
           --security-opt seccomp=unconfined `#optional` \
